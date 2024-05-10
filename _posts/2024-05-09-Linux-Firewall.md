@@ -4,7 +4,6 @@ date: 2024-05-09 08:00:00 +0800
 categories: [Linux]
 tags: [Linux, Firewall, Security]
 layout: post
-toc: true
 ---
 
 <h2>Wprowadzenie</h2>
