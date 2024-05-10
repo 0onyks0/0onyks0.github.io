@@ -7,10 +7,10 @@ layout: post
 ---
 
 ## Wprowadzenie
-Po utworzeniu nowego serwera opartego na Debianie lub Ubuntu, kluczowym krokiem jest skonfigurowanie zaporę ogniowej. To filtrowanie ruchu sieciowego, kontrolujące przychodzące i wychodzące połączenia. Dzięki ustawianiu reguł, możemy kontrolować, które połączenia są dozwolone, co zwiększa bezpieczeństwo serwera poprzez blokowanie nieautoryzowanych prób dostępu oraz ataków sieciowych. Skonfigurowanie zaporę na wczesnym etapie zapewnia bezpieczeństwo i kontrolę nad ruchem sieciowym.
+Po utworzeniu nowego serwera opartego na jakiejś dystrybucji linuxa, kluczowym krokiem jest skonfigurowanie zapory ogniowej. To filtrowanie ruchu sieciowego, kontrolujące przychodzące i wychodzące połączenia. Dzięki ustawianiu reguł, możemy kontrolować, które połączenia są dozwolone, co zwiększa bezpieczeństwo serwera poprzez blokowanie nieautoryzowanych prób dostępu oraz ataków sieciowych. Skonfigurowanie zapory na wczesnym etapie zapewnia bezpieczeństwo i kontrolę nad ruchem sieciowym.
 
 ## Instalacja zapory
-W przypadku serwerów opartych na Debianie oraz Ubuntu, zapory sieciowe mogą być używane do kontrolowania, które połączenia z określonymi usługami są dozwolone. W tym przewodniku skoncentrujemy się na instalacji i użyciu zapory UFW (Uncomplicated Firewall), która pomaga w ustawieniu reguł zapory i zarządzaniu wyjątkami.
+W tym przewodniku skoncentrujemy się na instalacji i użyciu zapory UFW (Uncomplicated Firewall), która pomaga w ustawieniu reguł zapory i zarządzaniu wyjątkami.
 
 Aby zainstalować UFW, możemy skorzystać z menedżera pakietów. Najpierw należy zaktualizować lokalny indeks pakietów, aby uzyskać najnowsze informacje o dostępnych pakietach:
 
