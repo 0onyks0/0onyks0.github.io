@@ -14,7 +14,7 @@ timezone: Europe/Warsaw
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: IT-WIKI # the main title
+title: WIKI # the main title
 
 tagline:  # it will display as the sub-title
 
