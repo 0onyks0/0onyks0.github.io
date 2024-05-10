@@ -6,10 +6,10 @@ tags: [Linux, Firewall, Security]
 layout: post
 ---
 
-<h2>Wprowadzenie</h2>
+## Wprowadzenie
 Po utworzeniu nowego serwera opartego na Debianie lub Ubuntu, kluczowym krokiem jest skonfigurowanie zaporę ogniowej. To filtrowanie ruchu sieciowego, kontrolujące przychodzące i wychodzące połączenia. Dzięki ustawianiu reguł, możemy kontrolować, które połączenia są dozwolone, co zwiększa bezpieczeństwo serwera poprzez blokowanie nieautoryzowanych prób dostępu oraz ataków sieciowych. Skonfigurowanie zaporę na wczesnym etapie zapewnia bezpieczeństwo i kontrolę nad ruchem sieciowym.
 
-<h2>Instalacja zapory</h2>
+## Instalacja zapory
 W przypadku serwerów opartych na Debianie oraz Ubuntu, zapory sieciowe mogą być używane do kontrolowania, które połączenia z określonymi usługami są dozwolone. W tym przewodniku skoncentrujemy się na instalacji i użyciu zapory UFW (Uncomplicated Firewall), która pomaga w ustawieniu reguł zapory i zarządzaniu wyjątkami.
 
 Aby zainstalować UFW, możemy skorzystać z menedżera pakietów. Najpierw należy zaktualizować lokalny indeks pakietów, aby uzyskać najnowsze informacje o dostępnych pakietach:
@@ -30,10 +30,10 @@ Po zainstalowaniu zapora pozostaje wyłączona do momentu, aż sami ją uruchomi
 sudo ufw enable
 ```
 
-<h2>Profile aplikacji:</h2>
+## Profile aplikacji
 Profile zapory w UFW umożliwiają zarządzanie nazwanymi zestawami reguł zapory dla zainstalowanych aplikacji. UFW dostarcza domyślne profile dla wielu popularnych programów, a także pozwala na rejestrowanie dodatkowych profili podczas instalacji pakietów. Na przykład, OpenSSH, usługa, która umożliwia połączenie się z serwerem, ma swój własny profil zapory, który możemy wykorzystać. Warto jednak pamiętać o tym, że opcja profili obsługuje tylko domyślne porty. Gdy zmienimy domyślny port usługi to trzeba również ręcznie dodać zmieniony port.
 
-<h2>Podstawowe komendy</h2>
+## Podstawowe komendy
 
 Wyświetlenie dostępnych profili zapory:
 
