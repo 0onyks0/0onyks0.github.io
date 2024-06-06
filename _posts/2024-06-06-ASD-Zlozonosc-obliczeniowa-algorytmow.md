@@ -4,28 +4,33 @@ date: 2024-05-09 08:00:00 +0800
 categories: [ASD]
 tags: [ASD, Złożoność obliczeniowa algorytmów]
 ---
+
 ## Definicje
 Operacje dominujące - zbiór operacji, których liczba jest proporcjonalna
 do liczby wszystkich operacji wykonywanych przez cały program.
 Do operacji dominujących zaliczamy pętle oraz odgałęzienie instrukcji warunkowych.
 
-### Przykład
+Przykład
+
 Co może być operacją dominującą w poniższym algorytmie?
 
-```code
+```shell
 find(arr, len, key){
-i = 0
-while(i < len){
-if(arr[i] == key)
-return i
-i++
-}
-return -1
+  i = 0
+  while(i < len){
+    if(arr[i] == key)
+    return i
+    i++
+  }
+  return -1
 }
 ```
 Porównanie i < len.
-Porównanie arr[i] == key
-Zwiększenie indeksu i++
+
+Porównanie arr[i] == key.
+
+Zwiększenie indeksu i++.
+
 Są to operacje dominujące, ponieważ wykonują się przez całą pracę programu.
 
 ## Dobry algorytm
