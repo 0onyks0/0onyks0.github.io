@@ -29,3 +29,8 @@ będącą sumą pierwszych len elementów tej tablicy lub zero jeśli jest pusta
 - Całkowicie poprawny algorytm - jest wtedy gdy dla każdych danych wejściowych zachodzą oba warunki:
 - Własność stopu - Algorytm zatrzymuje się po skończonej liczbie kroków.
 - Częściowa poprawność algorytmu - Algorytm przy zatrzymaniu zwraca poprawny wynik.
+
+Niezmiennik pętli - logiczny predykat spełniający warunek. 
+Jeśli predykat jest spełniony przed wejściem w pewną 
+iterację pętli to jest także spełniony po wyjściu z tej iteracji pętli.
+Niezmienniki są wykorzystywane w udowodnieniu częściowej poprawności algorytmu.
