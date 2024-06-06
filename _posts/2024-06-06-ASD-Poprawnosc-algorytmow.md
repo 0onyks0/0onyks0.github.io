@@ -25,3 +25,7 @@ Przykład specyfikacji:
 len - liczba naturalna będąca deklarowaną długością tablicy.
 -- Warunek końcowy - algorytm ma zwrócić liczbę całkowitą 
 będącą sumą pierwszych len elementów tej tablicy lub zero jeśli jest pusta.
+
+- Całkowicie poprawny algorytm - jest wtedy gdy dla każdych danych wejściowych zachodzą oba warunki:
+-- Własność stopu - Algorytm zatrzymuje się po skończonej liczbie kroków.
+-- Częściowa poprawność algorytmu - Algorytm przy zatrzymaniu zwraca poprawny wynik.
