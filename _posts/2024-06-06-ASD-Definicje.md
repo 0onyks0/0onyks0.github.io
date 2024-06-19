@@ -33,3 +33,8 @@ Specyfikacja to rodzaj "kontraktu" algorytmu, który w sposób bardziej formaly 
 # Przykładowe algorytmy
 
 ## Algorytm sumowania tablicy.
+
+```shell
+sum(array[], len)
+
+```
