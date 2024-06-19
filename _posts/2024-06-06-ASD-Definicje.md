@@ -38,7 +38,7 @@ Specyfikacja to rodzaj "kontraktu" algorytmu, który w sposób bardziej formaly 
 
 # Przykładowe algorytmy
 
-## Algorytm sumowania tablicy.
+## Algorytm sumowania tablicy
 
 ```shell
 sum(array[], len) {
@@ -49,5 +49,20 @@ sum(array[], len) {
       i++
   }
   return sum
+}
+```
+## Algorytm zwracający maksimum z tablicy
+
+```shell
+max(array[], len) {
+  i = 1
+  x = array[0]
+    while(i < len) {
+      if(array[i] > x) {
+        x = array[i]
+      }
+      i++
+  }
+  return x
 }
 ```
