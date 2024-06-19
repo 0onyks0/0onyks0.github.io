@@ -21,7 +21,13 @@ Poprawny wynik algorytmu to taki, który spełnia warunek końcowy specyfikacji.
 Algorytm jest całkowicie poprawny wtedy i tylko wtedy, gdy dla każdycch poprawnych danych wejściowych zachodzą oba poniższe warunki:
 
 - Własność stopu - algorytm zatrzymuje się po skończonej liczbie kroków,
+
 - Częściowa poprawność algorytmu - algorytm przy zatrzymaniu zwraca poprawny wynik.
+
+Algorytm jest częściowo poprawny jeśli spełnia warunek w formie implikacji - Jeżeli algorytm zatrzyma się to zwracany jest poprawany wynik. Przy założeniu poprawności danych wejściowych.
+
+## Niezmiennik pętli
+Niezmiennik pętli to logiczny predykat spełniający warunek - Jeśli predykat jest spełniony przed wejściem w pewną (Dowolną) iterację pętli to jest także spełniony po wyjściu z tej iteracji pętli.
 
 ## Specyfikacja
 Specyfikacja to rodzaj "kontraktu" algorytmu, który w sposób bardziej formaly opisuje co dokładnie algorytm ma zrobić. Specyfikacja składa się z następujących części:
@@ -44,5 +50,4 @@ sum(array[], len) {
   }
   return sum
 }
-
 ```
