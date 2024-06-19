@@ -52,7 +52,20 @@ Pamięciowa złożoność algorytmu jest to liczba jednostek pamięci głównej 
 Notacja "O()" służy do oznaczania górnego ograniczenia na tempo wzrostu danej funkcji. Notacja O() dla rzędów wielkości funkcji odpowiada intuicyjnie symbolowi ≤ dla liczb.
 
 ### Notacja "duże teta"
-Notacja "Θ()" służy do wyrażania faktu, że funkcja ma dokładnie taki sam rząd wielkości jak inna funkcja. Odpowiada to więc znakowi “=” dla rzędów wielkości funkcyj
+Notacja "Θ()" służy do wyrażania faktu, że funkcja ma dokładnie taki sam rząd wielkości jak inna funkcja. Odpowiada to więc znakowi “=” dla rzędów wielkości funkcji.
+
+### Dziel i rządź
+Dziel i rządź jest jedną z najskuteczniejszych technik projektowania algorytmów. Polega na podzieleniu problemu na podproblemy i wyjaśniamy jak  rozwiązań tych podproblemów otrzymać rozwiązanie oryginalnego problemu.
+
+### Algorytm wyszukiwania binarnego
+Algorytm wyszukiwania binarnego:
+1. dopóki długość ciągu jest dodatnia:
+2. porównaj klucz ze środkowym elementem ciągu,
+3. jeżli jest równość, to zwróć wynik (bieżący indeks),
+4. jeżli jest niższy niż element - ogranicz dalsze poszukiwania tylko do lewego podciągu (na lewo od bieżącego indeksu),
+5. jeżli jest wyższy niż element - ogranicz dalsze poszukiwania tylko do prawego podciągu (na prawo od bieżącego indeksu),
+6. wróć do kroku 1,
+7 jeżli długość ciągu spadła do zera, to nie ma klucza w ciągu.
 
 ## Przykładowe algorytmy
 
