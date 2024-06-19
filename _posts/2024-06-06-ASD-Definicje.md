@@ -35,6 +35,14 @@ Specyfikacja to rodzaj "kontraktu" algorytmu, który w sposób bardziej formaly 
 ## Algorytm sumowania tablicy.
 
 ```shell
-sum(array[], len)
+sum(array[], len) {
+  sum = 0
+  i = 0
+    while(i < len) {
+      sum += array[i]
+      i++
+  }
+  return sum
+}
 
 ```
