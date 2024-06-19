@@ -36,9 +36,10 @@ Specyfikacja to rodzaj "kontraktu" algorytmu, który w sposób bardziej formaly 
 - Warunek początkowy specyfikujący typy i dopuszczalne wartości poprawnych danych wejściowych.
 - Warunek końcowy specyfikujący prawidłowy wynik jego typ i wartość jaki ma być zwrócony przez algorytm jako funkcja danych wejściowych.
 
-# Przykładowe algorytmy
 
-## Algorytm sumowania tablicy
+## Przykładowe algorytmy
+
+### Algorytm sumowania tablicy
 
 ```shell
 sum(array[], len) {
@@ -51,7 +52,7 @@ sum(array[], len) {
   return sum
 }
 ```
-## Algorytm zwracający maksimum z tablicy
+### Algorytm zwracający maksimum z tablicy
 
 ```shell
 max(array[], len) {
