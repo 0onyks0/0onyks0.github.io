@@ -111,3 +111,20 @@ find(array[], len, key) {
   return -1
 }
 ```
+
+### Algorytm wyszukiwania binarnego
+```shell
+search(S, len, key){
+l = 0
+r = len - 1
+  while(l <= r){
+    m = (l + r)/2
+      if(S[m] == key) return m
+      else
+        if(S[m] > key) r = m - 1
+        else l = m + 1
+  }
+return -1
+}
+
+```
