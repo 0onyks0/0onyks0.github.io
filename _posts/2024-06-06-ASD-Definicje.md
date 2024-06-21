@@ -67,6 +67,88 @@ Algorytm wyszukiwania binarnego:
 6. wróć do kroku 1,
 7 jeżli długość ciągu spadła do zera, to nie ma klucza w ciągu.
 
+### Listy dowiązaniowe
+Listy dowiązaniowe składają się z węzłów i dowiązań które łączzą węzły. Każdy węzeł jest pewnym kontenerem i przechowuje jeden element. Istnieje wiele wariantów list dowiązaniowych takich jak:
+- Jednokierunkowe w których każdy węzeł zawiera wskaźnik do następnego węzła. Oznacza to że w takiej liście można poruszać isę tylko do przodu.
+- Dwukierunkowe w których każdy węzeł zawiera wskaźniki do następnika i poprzednika w liście. Dzięki takiemu rozwiązaniu można poruszać się po niej zarówno do przodu i do tyłu.
+### Listy dowiązaniowe vs tablice
+- tablice:
+zalety: bardzo szybki dostęp bezpośredni do dowolnego
+elementu, minimalne zużycie pamięci
+
+
+wady: wstawienie dowolnego elementu w środek ma liniowy
+złożoność czasową (przesuwanie innych elementów)
+- listy dowiązaniowe:
+zalety: wstawienie/usunięcie dowolnie długiej podlisty ma
+stałą złożoność czasową, niezależnie od długości podlisty
+(wystarczy przestawić stałą liczbę dowiązań)
+
+
+wady: wolny dostęp do elementów (liniowy) zależący od
+miejsca w liście, dodatkowa pamięć na dowiązania
+(wskaźniki)
+
+### Abstrakcyjne skrutkury danych
+Abstrakcyjna struktura danych zdefiniowana jest przez zestaw operacji, które można wykonać na danych, nie wnikając w ich sposób implementacji. Do takich struktur należy:
+- Stos,
+- Kolejka,
+- Kolejka dwustronna,
+
+
+### Stabilny algorytm
+Algorytm sortujący nazywamy stabilnym wtedy i tylko wtedy, gdy zachowuje pierwotny względny porządek elementów o tej samej warto±ci. np. jeżli ciąg wejściowy zawiera kilka elementów o warto±ci '2', to wszytkie te elementy w ciągu posortowanym będą w takiej samej względnej kolejno±ci:
+
+4, 2a, 3, 1, 2b, 5, 2c -> 1, 2a, 2b, 2c , 3 ,4 ,5
+
+### Kopiec binarny
+Kopiec binarny jest binarnym drzewem zupeªnym. Priorytety (wraz z odpowiadaj¡cymi im elementami) trzymane s¡ w w¦zªach drzewa, oraz zachodzi nast¦puj¡cy warunek porz¡dku kopca:
+
+Dla ka»dego w¦zªa, priorytet w tym w¦¹le jest niewi¦kszy, ni» priorytet w w¦zªach potomkach.
+
+### Słownik
+Słownik jest abstrakcyjn¡ struktur¡ danych sªu»¡c¡ do operowania na parach klucz-warto±¢.
+
+### Drzewo BST
+Drzewo BST jest drzewem binarnym, gdzie ka»dy w¦zeª przechowuje pewien klucz (z przypisan¡ warto±ci¡) i speªniony jest nast¦puj¡cy warunek porz¡dku BST: Dla ka»dego w¦zªa x, klucz w tym w¦¹le jest niemniejszy, ni» wszystkie klucze w lewym poddrzewie w¦zªa x oraz niewi¦kszy, ni» wszystkie klucze w prawym poddrzewie w¦zªa x.
+
+### Drzewo AVL
+Drzewo AVL (od nazwisk twórców: Adelson-Velskij, andis) jest drzewem BST z dodatkowym warunkiem. Warunek ten wprowadza dla ka»dego w¦zªa poj¦cie wspóªczynnika zrównowa»enia (bf - od ang. balance factor). Wspóªczynnik zrównowa»enia dla w¦zªa x zdeniowany jest jako ró»nica wysoko±¢i lewego poddrzewa w¦zªa x i prawego poddrzewa w¦zªa x.
+Denicja AVL jest nast¦puj¡ca: jest to drzewo BST, które dodatkowo ma wªasno±¢, »e w ka»dym w¦¹le x, bf (x) ∈ {−1, 0, 1}, czyli »e wysoko±ci poddrzew nie mog¡ si¦ ró»ni¢ o wi¦cej ni» 1.
+
+## Metody algorytmów
+### Stos
+Interfejs stosu (elementów typu Type):
+- push(Type e) (dodaj do stosu element e)
+- Type pop() (zdejmij i zwró¢ ze stosu element ostatnio dodany - operacja modykuj¡ca)
+- Type top() (zwró¢ bez zdejmowania element ostatnio dodany - operacja niemodykuj¡ca)
+### Kolejka
+Zdeniowana za pomoc¡ nast¦puj¡cego zestawu operacji (interfejsu):
+Kolejka (elementów typu Type):
+- inject(Type e) (wstaw nowy element do kolejki)
+- Type out() (wyjmij i zwró¢ element najdawniej dodany do kolejki - operacja modykuj¡ca)
+- Type front() (zwró¢ bez wyjmowania element najdawniej dodany do kolejki - operacja niemodykuj¡ca)
+### Kolejka dwustronna
+- Type rst() (poka» element z pierwszego ko«ca)
+- Type last() (poka» element z drugiego ko«ca)
+- pushFront(Type) (dodaj element do pierwszego ko«ca)
+- pushBack(Type) (dodaj element do drugiego ko«ca)
+- Type popFront() (zwró¢ i zdejmij element z pierwszego ko«ca)
+- Type popBack() (zwró¢ i zdejmij element z drugiego ko«ca)
+### Kolejka priorytetowa
+- insert(e, p) // dodaj element e o priorytecie p do kolejki
+- findMin() // // zwró¢ (bez usuwania) element o priorytecie
+- najpilniejszym spo±ród przechowywanych obecnie w kolejce
+- delMin() // //zwró¢ (z usuwaniem) element j.w.
+### Kolej
+- insert(e): dodaj nowy element e (wraz z jego priorytetem) w pierwszym od lewej wolnym w¦¹le x ostatniego poziomu, a nast¦pnie przywró¢ porz¡dek kopca pocz¡wszy od w¦zªa x w gór¦ (operacja upheap)
+- findMin(): zwró¢ element e znajduj¡cy si¦ w korzeniu kopca
+- delMin(): usu« element z korzenia, wstaw do korzenia element ostatni kopca (skrajnie prawy na ostatnim poziomie kopca) i przywró¢ porz¡dek kopca pocz¡wszy od korzenia w dóª (operacja downheap)
+### Słownik
+- search(K key) (zwraca warto±¢ zwi¡zan¡ z kluczem key)1
+- insert(K key, V value) // umieszcza now¡ par¦ klucz-warto±¢ w sªowniku
+- delete(K key) // kasuje par¦ zwi¡zan¡ z kluczem key (zakªada si¦, »e klucze s¡ unikatowe
+
 ## Przykładowe algorytmy
 
 ### Algorytm sumowania tablicy
@@ -126,5 +208,43 @@ r = len - 1
   }
 return -1
 }
-
+```
+### Sortowanie przez wybór - selection sort
+```shell
+selectionSort(S, len){
+  i = 0
+    while(i < len){
+      mini = indexOfMin(S, i, len)
+      swap(S, i, mini)
+      i++
+    }
+}
+```
+### Sortowanie przez wstawienie - insertion sort
+```shell
+insertionSort(arr, len){
+  for(next = 1; next < len; next++){
+    curr = next;
+    temp = arr[next];
+      while((curr > 0) && (temp < arr[curr - 1])){
+        arr[curr] = arr[curr - 1];
+        curr--;
+      }
+  arr[curr] = temp;
+  }
+}
+```
+### Sortowanie przez zliczanie - count sort
+```shell
+countSort(a, l){
+  max = maxValue(a, l);
+  l1 = max + 1;
+  counts[l1];
+  result[l];
+    for(i = 0; i < l1; i++) counts[i] = 0;
+      for(i = 0; i < l; i++) counts[a[i]]++;
+        for(i = 1; i < l1; i++) counts[i] += counts[i - 1];
+          for(i = l - 1; i >= 0; i--)
+            result[--counts[a[i]]] = a[i];
+}
 ```
